@@ -23,18 +23,10 @@ class Distance:
             return self
 
     def __mul__(self, other: Distance | int | float) -> Distance:
-    
-    # if isinstance(other, Distance):
-    # return Distance(self.km * other.km)
-    
         if isinstance(other, (int, float)):
             return Distance(self.km * other)
 
     def __truediv__(self, other: Distance | int | float) -> Distance:
-    
-    # if isinstance(other, Distance):
-    # return Distance(round(self.km / other.km, 2))
-    
         if isinstance(other, (int, float)):
             return Distance(round(self.km / other, 2))
 
@@ -67,7 +59,7 @@ class Distance:
             return self.km >= other.km
         if isinstance(other, (int, float)):
             return self.km >= other
-        
+
 # distance = Distance(20)
 # print(distance)      # Вызовет __str__ и напечатает текст
 # print(repr(distance)) # Вызовет __repr__ и напечатает строковое представление
